@@ -1,0 +1,65 @@
+front <----> back <---> DB (PostgresSQL)
+
+technologies:
+-Spring:
+/boot
+/Web
+/Security
+/Thymeleaf
+/Data JPA + PostgresSQL
+additional:
+/Flyway + Lombok
+
+------------------------------------------------
+
+features:
+- Аутентификация и регистрация пользователей
+- Защита веб-приложения
+- Просмотр товаров
+- Добавление товаров в корзину
+- Формирование заказов
+- Оплата (PayPal)
+- Фильтрация/сортировка товаров
+- Управление корзиной
+- Валидация вводимых данных
+- Оповещение по email
+- Навигация
+------------------------------------------------
+
+Entities :
+1. Product
+	-id
+	-title
+	-price
+	-categories
+	-nds, sales (optional)
+2. User
+	-id
+	-name
+	-email
+	-password
+	-role
+	-address (optional)
+	-archive
+	-phone
+3. Role
+	- USER
+	- GUEST
+ 	- ADMIN
+	- MANAGER
+4. Order
+	-id
+	-created date
+	-last change date
+	-completed date (????)
+	-address
+	-user
+	-status ( NEW, CANCEL, PAID, CLOSED, RETURNED)
+	-ditails( price, product, amount, comment)
+5. Category
+	-id
+	-title
+6. Bucket
+	-id
+	-user
+	-details (product, amount) / product list
